@@ -1,15 +1,18 @@
 <template>
 <div>
+  <Shop/>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+
+import Shop from './components/Shop.vue';
+
 
 export default {
   name: 'App',
   components: {
-    // HelloWorld
+    Shop
   }
 }
 </script>
@@ -22,5 +25,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+body{
+  margin: 0;
+  background: #eee;
 }
 </style>
