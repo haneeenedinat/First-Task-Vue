@@ -32,6 +32,10 @@ name:"SinglePage",
   justify-content: space-between;
 }
 
+.img{
+  margin:0 10px;
+}
+
 @media (max-width:600px) {
  .book-item{
  display: flex;

@@ -5,7 +5,6 @@
   <div v-for="(book,index) in arr_books"  :key="{book}" class="book-item" @click="handelcomponent(index)">   
   <div class="img">
     <img :alt="book.title" :src="book.Src_image">
-    <!-- {{index}} -->
  </div>
 
 <div class="Book-Details">
@@ -24,10 +23,9 @@
 </template>
 
 <script>
-import SinglePage from "./Single-Page.vue";
+import SinglePage from "./SinglePage.vue";
 export default {
     name:"ShopHaneen",
-    // props:["Src_image","title","description","status","price","index"],
 components:{
   SinglePage,
 },
@@ -104,6 +102,7 @@ data(){
     width: 250px;
     height: 300px;
 }
+
 .book-item{
  display: flex;
  flex-direction: column;
