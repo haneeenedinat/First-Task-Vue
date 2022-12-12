@@ -1,6 +1,7 @@
 <template>
 <div>
-  <Shop/>
+  <Shop />
+
   </div>
 </template>
 
@@ -8,12 +9,14 @@
 
 import Shop from './components/Shop.vue';
 
-
 export default {
   name: 'App',
+
   components: {
-    Shop
-  }
+    Shop,
+  },
+
+  
 }
 </script>
 

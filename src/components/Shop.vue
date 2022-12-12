@@ -1,11 +1,11 @@
 <template>
-  <div>
+    <div>
     <h1>Books At Alefredobooks</h1>
     <div class="container">
-  <div v-for="book in arr_books" :key="{book}" class="book-item">
-     
+  <div v-for="(book,index) in arr_books"  :key="{book}" class="book-item" @click="handelcomponent(index)">   
   <div class="img">
     <img :alt="book.title" :src="book.Src_image">
+    <!-- {{index}} -->
  </div>
 
 <div class="Book-Details">
@@ -13,21 +13,42 @@
   <p> Description: {{book.description}}</p>
   <p>Book Status :{{book.status}}</p>
   <p>Book Price :{{book.price}}</p>
-  </div>
-  </div>
 
+
+  </div>
+  </div>
+<SinglePage v-if="Show" :index='index' :arr_books="arr_books[index]"/>
 </div>
 </div>
 
 </template>
 
 <script>
+import SinglePage from "./Single-Page.vue";
 export default {
     name:"ShopHaneen",
+    // props:["Src_image","title","description","status","price","index"],
+components:{
+  SinglePage,
+},
+    methods:{
+      handelcomponent(index){
+        this.Show=true;
+       this.index=index;
+      //  console.log(index);
+      //  console.log(this.Show);
+      //  console.log(this.arr_books[this.index])
+    }
+      },
+  
+ 
 data(){
     return{
+      index:null,
+      Show:false,
      arr_books:[
         {
+              id:1,       
               Src_image: require('../assets/AP-Biology-Prep-Plus.jpg'),
              title:"AP Biology Prep Plus 2020 & 2021",
              description:"AP Biology Prep Plus 2020 & 2021",
@@ -35,7 +56,7 @@ data(){
              price:"30 JD",
         },
         {
-          
+              id:2,
               Src_image: require('../assets/AP-Physics.jpg'),
              title:"AP Physics 1",
              description:"AP Physics 1",
@@ -43,6 +64,7 @@ data(){
              price:"21 JD",
         },
         {
+              id:3,
              Src_image:require('../assets/BARRONS-Chemistry.png'),
              title:"BARRON’S Science 360 A Complete Study Guide to Chemistry",
              description:"BARRON’S Science 360 A Complete Study Guide to Chemistry",
@@ -50,6 +72,7 @@ data(){
              price:"25 Jd",
         },
         {
+             id:4,
              Src_image:require('../assets/AP-World-History.jpg'),
              title:"Princeton Review AP World History",
              description:"Princeton Review AP World History",
@@ -57,6 +80,7 @@ data(){
              price:"28 JD",
         },
         {
+             id:5,
              Src_image:require('../assets/BARRONS-Math-Algebra.png'),
              title:"BARRON’S Math 360 A Complete Study Guide to Pre-Algebra",
              description:"BARRON’S Math 360 A Complete Study Guide to Pre-Algebra",
@@ -69,7 +93,7 @@ data(){
 }
 </script>
 
-<style>
+<style scoped>
 .container{
     display: flex;
     flex-wrap: wrap;
@@ -100,11 +124,12 @@ width:70%;
 .book-item{
   width: 40%;
 }
-
+}
 @media (max-width:600px) {
    .book-item{
   width: 50%;
 } 
+}
 @media (max-width:500px) {
     .book-item{
   width: 70%;
@@ -115,18 +140,5 @@ width:70%;
   width: 90%;
 }    
 }
-}
-  /* .container{
-   display: grid;
-    grid-template-columns: auto auto ;
-    justify-content: center;
-    grid-gap: 1em; 
-  
-}
 
-.book-item{
-    width:80%;
-} */
-
-}
 </style>
