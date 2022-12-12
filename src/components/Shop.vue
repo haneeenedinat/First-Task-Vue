@@ -46,7 +46,7 @@ data(){
       Show:false,
      arr_books:[
         {
-              id:1,       
+    
               Src_image: require('../assets/AP-Biology-Prep-Plus.jpg'),
              title:"AP Biology Prep Plus 2020 & 2021",
              description:"AP Biology Prep Plus 2020 & 2021",
@@ -54,7 +54,7 @@ data(){
              price:"30 JD",
         },
         {
-              id:2,
+          
               Src_image: require('../assets/AP-Physics.jpg'),
              title:"AP Physics 1",
              description:"AP Physics 1",
@@ -62,7 +62,7 @@ data(){
              price:"21 JD",
         },
         {
-              id:3,
+       
              Src_image:require('../assets/BARRONS-Chemistry.png'),
              title:"BARRON’S Science 360 A Complete Study Guide to Chemistry",
              description:"BARRON’S Science 360 A Complete Study Guide to Chemistry",
@@ -70,7 +70,7 @@ data(){
              price:"25 Jd",
         },
         {
-             id:4,
+        
              Src_image:require('../assets/AP-World-History.jpg'),
              title:"Princeton Review AP World History",
              description:"Princeton Review AP World History",
@@ -78,7 +78,7 @@ data(){
              price:"28 JD",
         },
         {
-             id:5,
+        
              Src_image:require('../assets/BARRONS-Math-Algebra.png'),
              title:"BARRON’S Math 360 A Complete Study Guide to Pre-Algebra",
              description:"BARRON’S Math 360 A Complete Study Guide to Pre-Algebra",
